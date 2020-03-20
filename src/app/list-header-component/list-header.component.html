@@ -1,0 +1,23 @@
+<div class="films-list-header">
+  <div class="films-header-item films-header-name">
+    <h6>{{name}}</h6>
+    <div class="film-name-sorting">
+      <i
+        class="material-icons"
+        (click)="onListSorting(false)">keyboard_arrow_up</i>
+      <i
+        class="material-icons"
+        (click)="onListSorting(true)">keyboard_arrow_down</i>
+    </div>
+
+  </div>
+  <div class="films-header-item films-header-season">
+    <h6>{{season}}</h6>
+  </div>
+  <div class="films-header-item films-header-network">
+    <h6>{{network}}</h6>
+  </div>
+  <div class="films-header-item films-header-premiere">
+    <h6>{{premiere}}</h6>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="pagination-component">
+
+    <div class="pagination-pages-container">
+      <div class="pagination-pages">
+        <mat-icon
+          class="pagination-control-element"
+          (click)="onPreviousPage()">keyboard_arrow_left</mat-icon>
+        <span
+          class="pagination-page-element pagination-control-element"
+          *ngFor="let page of pageCount"
+          [ngClass]="{active: page==currentPage}"
+          (click)="onPageNumberChanged(page)">{{page}}
+      </span>
+        <mat-icon
+          class="pagination-control-element"
+          (click)="onNextPage()">keyboard_arrow_right</mat-icon>
+      </div>
+
+    </div>
+
+    <div class="pagination-size-container">
+      <div class="pagination-size">
+        <span
+          class="pagination-size-element pagination-control-element"
+          *ngFor="let size of pageSizes; let i = index;"
+          [ngClass]="{active: size==currentPageSize}"
+          (click)="onPageSizeChanged(i, size)">{{size}}
+        </span>
+      </div>
+
+    </div>
+</div>

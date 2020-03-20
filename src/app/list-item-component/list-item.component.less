@@ -1,0 +1,40 @@
+.film-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 60px;
+  align-items: baseline;
+
+  p {
+    margin: 0;
+  }
+
+  .film-property {
+    flex-shrink: 1;
+    width: 130px;
+    min-width: 60px;
+    text-align: center;
+    font-size: 16px;
+
+    .film-genre-container {
+      display: flex;
+      flex-wrap: wrap;
+
+      .film-genre {
+        padding: 2px 8px;
+        border-radius: 20px;
+        font-size: 12px;
+
+        &:not(:last-of-type) {
+          margin-right: 3px;
+        }
+      }
+    }
+  }
+
+  .film-name {
+    width: 170px;
+    flex-shrink: 0;
+    text-align: left !important;
+  }
+}

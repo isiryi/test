@@ -1,0 +1,19 @@
+<div class="film-container">
+  <div class="film-property film-name">
+    <p>{{ film.name }}</p>
+    <div class="film-genre-container">
+      <span class="film-genre" *ngFor="let genre of film.genre" appGenreDirective genre={{genre}}>
+      {{ genre }}
+    </span>
+    </div>
+  </div>
+  <div class="film-property">
+    <p>{{ film.season }}</p>
+  </div>
+  <div class="film-property">
+    <p>{{ film.network }}</p>
+  </div>
+  <div class="film-property">
+    <p>{{ film.premiere | date: 'dd-MM-yyyy' }}</p>
+  </div>
+</div>
